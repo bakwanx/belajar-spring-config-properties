@@ -19,6 +19,8 @@ public class ValueTest {
 
     @Test
     void testValue() {
+        var haha = 10;
+        System.out.println(haha);
         Assertions.assertEquals("Belajar Spring Boot", properties.getName());
         Assertions.assertEquals(1, properties.getVersion());
         Assertions.assertEquals(false, properties.isProductionMode());
