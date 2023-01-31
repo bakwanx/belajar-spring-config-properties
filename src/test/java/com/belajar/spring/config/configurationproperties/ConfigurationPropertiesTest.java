@@ -44,9 +44,9 @@ public class ConfigurationPropertiesTest {
     @Test
     void testConfigurationProperties() {
         Assertions.assertNotNull(foo);
-        Assertions.assertEquals("Belajar Spring Boot", properties.getName());
-        Assertions.assertEquals(1, properties.getVersion());
-        Assertions.assertEquals(false, properties.isProductionMode());
+        Assertions.assertEquals("Belajar Spring Boot Using Yaml", properties.getName());
+        Assertions.assertEquals(3, properties.getVersion());
+        Assertions.assertEquals(true, properties.isProductionMode());
     }
 
     @Test
@@ -99,7 +99,6 @@ public class ConfigurationPropertiesTest {
     })
     public static class TestApplication {
 
-        @Primary
         @Bean
         public ConversionService conversionService(StringToDateConverter stringToDateConverter){
             ApplicationConversionService conversionService = new ApplicationConversionService();
